@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #0E102D;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    
+}
+header label{
+    margin-left: 5%;
+}
+header label p{
+    display: inline;
+}
+header label p:nth-child(1){
+    font-size: 23px;
+    margin-right: 0px;
+}
+header label p:nth-child(2){
+    font-size: 20px;
+    color: #5AA2AE;
+    font-family: 'Architects Daughter', cursive;
+}
+ul li{
+    margin: 0px 20px 0px 0px;
+    display: inline;
+}
+ul li a{
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+/* ul li:nth-child(3){
+    border: 2px solid white;
+    /* padding:7px 15px 7px 15px ; 
+    border-radius: 15px;
+} */
+/* ul li:nth-child(4){
+    background-color: white;
+   padding:8px 15px 8px 15px ;
+    border-radius: 15px;
+}
+#cadastre{
+    color: black;
+} */
+.linkNormal:hover{
+    color: #5AA2AE;
+}
+ul li #login{
+    width: 63px;
+    padding: 7px 10px 7px 10px;
+    border-radius: 15px;
+    border: 2px solid white;
+}
+ul li #login:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.3s;
+}
+ul li #cadastre{
+    width: 110px;
+    padding: 7px 10px 7px 10px;
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+ul li #cadastre:hover{
+    background-color: #0E102D;
+    color: white;
+    transition: all 0.3s;
+}
+section{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    margin-top: 5%;
+    width: 30%;
+    /* background-color: #151D34; */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    height: 500px;
+    border-radius: 20px 20px 20px 20px ;
+    /* filter: drop-shadow(6px 6px 20px rgba(21, 21, 22, 0.5)); */
+    box-shadow: 10px 10px 25px rgba(0,0,0,0.5);
+    /* backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px ); */
+}
+
+.card div{
+    height: 50%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    
+}
+.card div:nth-child(2){
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.card:hover div {
+    transform: scale(1);
+    transition: translateY(0px);
+    opacity: 1;
+}
+.card div:nth-child(1){
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.card:nth-child(1) div:nth-child(1) img{
+    /* background: url(https://pixabay.com/get/g30259f63a550ed4054dedaad8119c94fae312b3bf83e360794ab8a594ee1479aa07eff37c3e70f6a3bda464c2d3ee67707e80f47292e3b7140c8751512fd1a5fd887eb49e6541994ee924144c0c6dce2_640.jpg); */width: 100%;
+    height: 100%;
+    filter: opacity(0.4) drop-shadow(0 0 0 rgb(31, 31, 95)); 
+    border-radius: 20px 20px 0 0;
+}
+.card:nth-child(1) div:nth-child(1) h1{
+    position: absolute;
+}
+
+.card:nth-child(2) div:nth-child(1) img{
+    /* background: url(https://pixabay.com/get/g143f6e94886d026ed4fadb04ac850f62e40cf09694b385e527c5fd81aa684b5dfff14e10936330a550c51bc132f03b52ba4ccf9b976c2401798d4a27120732b1db2b11d62ddd069f2ecdd3ee44e6d60c_640.jpg); */
+    width: 100%;
+    height: 100%;
+    /* filter: opacity(0.4) drop-shadow(0 0 0 rgb(31, 31, 95)); */
+    border-radius: 20px 20px 0 0 ;
+
+}
+.card:nth-child(2) div:nth-child(1) h1{
+    position: absolute;
+}
+.card div:nth-child(1) h1{
+    color: white;
+}
+.card div:nth-child(2){
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.card div:nth-child(2) p{
+    width: 85%;
+}
+#but {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#but p button{
+    margin: 50px 50px 0px 50px;
+    width: 300px;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 10px 20px 10px 20px;
+    text-transform: uppercase;
+}
+#but p button:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.3s;
+}
+

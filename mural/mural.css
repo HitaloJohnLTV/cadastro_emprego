@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, a{
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --roxo: rgb(14, 16, 45);
+    --azul: #5AA2AE;
+    --fonte-destaque: 'Poppins', sans-serif;
+    --fonte-padrao: 'Roboto', sans-serif;
+}
+body{
+    background-color: rgba(14, 16, 45, 0.9);
+    
+}
+/*Menu*/
+header{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+    padding: 10px 70px;
+    margin-bottom: 30px;
+}
+header img{
+    width: 120px;
+}
+nav ul{
+    display: flex;
+    gap: 25px
+}
+nav ul li{
+    font-family: var(--fonte-padrao);
+}
+nav ul li a{
+    color: white;
+}
+nav ul li a:hover {
+    color: var(--azul);
+}
+nav ul .btn-login{
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 8px 20px;
+}
+nav ul .btn-login:hover{
+    background-color: white;
+    color: var(--roxo);
+
+}
+nav ul .btn-cadastro{
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: white;
+    padding: 8px 20px;
+    color: var(--roxo);
+}
+nav ul .btn-cadastro:hover{
+    background-color: transparent;
+    color: white;
+}
+nav ul .btn-login, nav ul .btn-cadastro, nav ul li a{
+    transition: all .3s ease;
+}
+/*Main*/
+main{
+    font-family: var(--fonte-padrao);
+    margin: 0 auto;
+    width: 1400px;
+    display: flex;
+    justify-content: space-around;   
+}
+.perfil-user{
+    width: 450px;
+    border-radius: 30px;
+    padding: 0 35px;
+}
+.vagas-emprego{
+    width: 800px;
+}
+.perfil-user, .vagas-emprego{
+    background-color: white;
+}
+.perfil-header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 20px 0;
+}
+.perfil-header h2{
+    text-align: center;
+    font-size: 2em;
+    font-family: var(--fonte-destaque);
+}
+.perfil-header i{
+    font-size: 4em;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid black;
+    outline: 0;
+    padding: 7px;
+}
+form input[type="submit"]{
+    border: 1px solid black;
+}
+label{
+    display: flex;
+    flex-direction:column;
+}
+.inputBox{
+    margin-bottom: 20px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+}
