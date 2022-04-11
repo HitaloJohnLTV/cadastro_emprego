@@ -35,10 +35,11 @@ if(!isset($current_id)){
 
         <nav class="menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Mural</a></li>
-                <li><a href="#" class="btn-login">Login</a></li>
-                <li><a href="#" class="btn-cadastro">Cadastre-se</a></li>
+                <li><a href="../home/inicio.php">Home</a></li>
+                <li><a href="../mural/mural.php">Mural</a></li>
+                <li><a href="../formularios/login.php" class="btn-login">Login</a></li>
+                <li><a href="../formularios/cadastro.php" class="btn-cadastro">Cadastre-se</a></li>
+                <a href=""></a>
             </ul>
         </nav>
     </header>
@@ -64,7 +65,7 @@ if(!isset($current_id)){
                             </div>
                             <div class="inputBox">
                                 <label for="cpf">
-                                    CPF:<input type="text" name="cpf" id="cpf">
+                                    CPF:<input type="text" name="cpf" id="cpf" autocomplete="off">
                                 </label>
                             </div>
                             <div class="inputBox">
@@ -112,8 +113,7 @@ if(!isset($current_id)){
     </main>
     <footer>
         <p>LTV Jobs &copy Todos os direitos reservados | 2022</p>
-        <p>Feito por John e Hítalo</p>
+        <p>Feito por <a href="https://github.com/HitaloJohnLTV">John e Hítalo</a></p>
     </footer>
-    
 </body>
 </html>
