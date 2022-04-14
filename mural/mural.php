@@ -65,12 +65,13 @@ if(!isset($current_id)){
                             </div>
                             <div class="inputBox">
                                 <label for="cpf">
-                                    CPF:<input type="text" name="cpf" id="cpf" autocomplete="off">
+                                    CPF:<input type="text" name="cpf" id="cpf" autocomplete="off" value="<?=$usuarios['cpf']?>">
                                 </label>
                             </div>
                             <div class="inputBox">
                                 <label for="estado">
-                                    Estado:<input type="text" name="estado" id="estado">
+                                    Estado:
+                                    <input type="text" name="estado" id="estado" value="<?=$usuarios['estado']?>"> 
                                 </label>
                             </div>
                             <input type="submit" value="Editar">
