@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require_once 'classes/usuarios.php';
 
@@ -8,16 +9,22 @@ $lista = [];
 
 $current_id = $_SESSION['id_usuario'];
 
-$sql = $pdo->query("SELECT * FROM usuarios WHERE id_usuario = $current_id");
-if($sql->rowCount() > 0){
-    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+if($current_id > 0){
+    $sql = $pdo->query("SELECT * FROM usuarios WHERE id_usuario = $current_id");
+    if($sql->rowCount() > 0){
+        $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
+    $sql->execute();
+    
+    if(!isset($current_id)){
+        header("Location: login.php");
+        exit;
+    }
 }
-$sql->execute();
+else{
+    echo 'erro';
+}
 
-if(!isset($current_id)){
-    header("Location: login.php");
-    exit;
-}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,8 +45,8 @@ if(!isset($current_id)){
                 <li><a href="../home/inicio.php">Home</a></li>
                 <li><a href="../mural/mural.php">Mural</a></li>
                 <li><a href="../formularios/login.php" class="btn-login">Login</a></li>
-                <li><a href="../formularios/cadastro.php" class="btn-cadastro">Cadastre-se</a></li>
-                <a href=""></a>
+                <li><a href="../formularios/cadastro.php" class="btn-cadastro">Cadastre-se</a>
+                <!-- <a href="<?php unset($current_id);?>">Sair</a>                 -->
             </ul>
         </nav>
     </header>

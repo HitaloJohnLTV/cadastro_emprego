@@ -27,6 +27,7 @@
             <div class="inputBox">
                 <label for="senha">Informe sua senha</label>
                 <input type="password" name="senha" id="senha" autocomplete="off" maxlength="15">
+                <label id="lbleye"><img src="view.svg" id="eye"></label>
             </div>
             <input type="submit" value="Cadastrar" class="btn-cadastrar">
         </form>
@@ -40,12 +41,13 @@ if(isset($_POST['nome'])){
     $nome = addslashes($_POST['nome']);
     $email = addslashes($_POST['email']);
     $senha = addslashes($_POST['senha']);
-
+    $cpf = '';
+    $estado = '';
     //verificar se esta preenchido
     if(!empty($nome) && !empty($email) && !empty($senha)){
         $u->conectar("db_login", "localhost", "root", "");
         if($u->msgErro == ""){//se estiver ok
-            if($u->cadastrar($nome, $email, $senha)){
+            if($u->cadastrar($nome, $email, $senha, $cpf, $estado)){
                 header("Location: login.php");
                 ?>
                 <!-- <div class="msg-sucesso">
@@ -76,5 +78,6 @@ if(isset($_POST['nome'])){
     }
 }
 ?>
+<script src="mostrarsenha.js"></script>
 </body>
 </html>

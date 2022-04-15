@@ -12,16 +12,15 @@
 </head>
 <body id="body">
     <header>
-        <label for="">
-            <p>LTV</p><p>Jobs</p>
-        </label>
+        <img src="logo-ltvjobs.svg" alt="">
         <ul>
             <li><a href="#" class="linkNormal">Home</a></li>
-            <li><a href="../mural/mural.html" class="linkNormal">Mural</a></li>
+            <li><a href="../mural/mural.php" class="linkNormal">Mural</a></li>
             <li><a href="../formularios/login.php" id="login">Login</a></li>
             <li><a href="../formularios/cadastro.php" id="cadastre">Cadastre-se</a></li>
         </ul>
     </header>
+
     <hr>
     <section>
         <div class="card">
@@ -45,7 +44,7 @@
     </section>
     <div id="but">
         <p>
-            <button>Procurar vagas</button>
+            <a href="../formularios/login.php">Procurar vagas</a>
         </p>
     </div>
 

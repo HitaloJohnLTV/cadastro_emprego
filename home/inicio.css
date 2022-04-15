@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto&display=swap');
-html{
-    scroll-behavior: smooth;
-}
+
 *{
     margin: 0;
     padding: 0;
@@ -22,51 +19,35 @@ header{
     font-family: 'Roboto', sans-serif;
     
 }
-header label{
-    margin-left: 5%;
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 70px;
+    height: 70px;
 }
-header label p{
-    display: inline;
+header img{
+    width: 120px;
 }
-header label p:nth-child(1){
-    font-size: 23px;
-    margin-right: 0px;
-}
-header label p:nth-child(2){
-    font-size: 20px;
-    color: #5AA2AE;
-    font-family: 'Architects Daughter', cursive;
+ul{
+    display: flex;
+    align-items: center;
 }
 ul li{
+    list-style: none;
     margin: 0px 20px 0px 0px;
-    display: inline;
 }
 ul li a{
     display: inline-block;
     text-decoration: none;
-    list-style: none;
     color: white;
 }
-/* ul li:nth-child(3){
-    border: 2px solid white;
-    /* padding:7px 15px 7px 15px ; 
-    border-radius: 15px;
-} */
-/* ul li:nth-child(4){
-    background-color: white;
-   padding:8px 15px 8px 15px ;
-    border-radius: 15px;
-}
-#cadastre{
-    color: black;
-} */
 .linkNormal:hover{
     color: #5AA2AE;
 }
 ul li #login{
     width: 63px;
     padding: 7px 10px 7px 10px;
-    border-radius: 15px;
+    border-radius: 30px;
     border: 2px solid white;
 }
 ul li #login:hover{
@@ -77,7 +58,7 @@ ul li #login:hover{
 ul li #cadastre{
     width: 110px;
     padding: 7px 10px 7px 10px;
-    border-radius: 15px;
+    border-radius: 30px;
     border: 2px solid white;
     background-color: white;
     color: black;
@@ -94,11 +75,9 @@ section{
 }
 .card{
     margin-top: 5%;
-    width: 30%;
     /* background-color: #151D34; */
-    background-color: rgba(255, 255, 255, 0.1);
+    width: 500px;
     backdrop-filter: blur(5px);
-    height: 500px;
     border-radius: 20px 20px 20px 20px ;
     /* filter: drop-shadow(6px 6px 20px rgba(21, 21, 22, 0.5)); */
     box-shadow: 10px 10px 25px rgba(0,0,0,0.5);
@@ -164,13 +143,12 @@ section{
 }
 #but {
     width: 100%;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#but p button{
-    margin: 50px 50px 0px 50px;
-    width: 300px;
+#but p a{
     background-color: transparent;
     outline: none;
     color: white;
@@ -178,12 +156,15 @@ section{
     font-family: 'Roboto', sans-serif;
     border: 2px solid white;
     border-radius: 30px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 30px;
     text-transform: uppercase;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+
 }
-#but p button:hover{
+#but p a:hover{
     background-color: white;
     color: black;
-    transition: all 0.3s;
 }
 
