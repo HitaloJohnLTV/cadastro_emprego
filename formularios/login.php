@@ -25,6 +25,7 @@ $u = new Usuario;
             <div class="inputBox">
                 <label for="senha">Informe sua senha</label>
                 <input type="password" name="senha" id="senha" autocomplete="off">
+                <label id="lbleye"><img src="view.svg" id="eye"></label>
             </div>
             <input type="submit" value="Entrar" class="btn-cadastrar">
         </form>
@@ -65,5 +66,7 @@ if(isset($_POST['email'])){
     }
 }
     ?>
+    <script src="mostrarsenha.js"></script>
+
 </body>
 </html>
